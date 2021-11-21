@@ -1,20 +1,20 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-*:focus{
+*:focus {
     outline: none;
 }
 
-body{
+body {
     position: relative;
     background: #f0f0f0;
     font-family: 'roboto', sans-serif;
 }
 
-.navbar{
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -26,14 +26,14 @@ body{
     padding: 0 2.5vw;
 }
 
-.toggle-btn{
+.toggle-btn {
     width: 20px;
     height: 10px;
     position: relative;
     cursor: pointer;
 }
 
-.toggle-btn span{
+.toggle-btn span {
     position: absolute;
     width: 100%;
     height: 2px;
@@ -42,20 +42,20 @@ body{
     background: #979797;
 }
 
-.toggle-btn span:nth-child(1){
+.toggle-btn span:nth-child(1) {
     top: 0;
 }
 
-.toggle-btn span:nth-child(3){
+.toggle-btn span:nth-child(3) {
     top: 100%;
 }
 
-.logo{
+.logo {
     height: 30px;
-    margin: -10px 30px 0;
+    margin: 0px 30px 0;
 }
 
-.search-box{
+.search-box {
     position: relative;
     max-width: 500px;
     width: 50%;
@@ -63,7 +63,7 @@ body{
     display: flex;
 }
 
-.search-bar{
+.search-bar {
     width: 85%;
     height: 100%;
     border: 2px solid #dbdbdb;
@@ -72,7 +72,7 @@ body{
     text-transform: capitalize;
 }
 
-.search-btn{
+.search-btn {
     width: 15%;
     height: 100%;
     background: #f0f0f0;
@@ -81,24 +81,24 @@ body{
     border-left: none;
 }
 
-.search-btn img{
+.search-btn img {
     height: 100%;
 }
 
-.user-options{
+.user-options {
     height: 35px;
     display: flex;
     margin-left: auto;
     align-items: center;
 }
 
-.user-options .icon{
+.user-options .icon {
     height: 80%;
     margin-right: 20px;
     cursor: pointer;
 }
 
-.user-dp{
+.user-dp {
     cursor: pointer;
     height: 30px;
     width: 30px;
@@ -106,15 +106,16 @@ body{
     overflow: hidden;
 }
 
-.user-dp img{
+.user-dp img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+
 /* side-bar */
 
-.side-bar{
+.side-bar {
     position: fixed;
     top: 60px;
     left: 0;
@@ -125,7 +126,7 @@ body{
     padding-right: 10px;
 }
 
-.links{
+.links {
     display: block;
     width: 100%;
     padding: 10px 20px;
@@ -138,29 +139,31 @@ body{
     text-decoration: none;
 }
 
-.links img{
+.links img {
     height: 25px;
     margin-right: 20px;
 }
 
 .links:hover,
-.links.active{
+.links.active {
     background: rgba(0, 0, 0, 0.1);
 }
 
-.seperator{
+.seperator {
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin: 20px 0;
 }
 
+
 /* filter */
 
-.filters{
+.filters {
     position: fixed;
-    left: 250px;
+    /* left: 250px; */
     top: 60px;
-    width: calc(100% - 250px);
+    /* width: calc(100% - 250px); */
+    width: 100%;
     height: 60px;
     background: #fff;
     border-top: 1px solid #dbdbdb;
@@ -172,11 +175,11 @@ body{
     overflow-y: hidden;
 }
 
-.filters::-webkit-scrollbar{
+.filters::-webkit-scrollbar {
     display: none;
 }
 
-.filter-options{
+.filter-options {
     flex: 0 0 auto;
     padding: 10px 20px;
     border-radius: 50px;
@@ -189,17 +192,18 @@ body{
     cursor: pointer;
 }
 
-.filter-options.active{
+.filter-options.active {
     color: #fff;
     background: #242424;
 }
 
+
 /* video */
 
-.video-container{
-    width: calc(100% - 250px);
+.video-container {
+    /* width: calc(100% - 250px); */
     margin-top: 120px;
-    margin-left: 250px;
+    /* margin-left: 250px; */
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 25%);
@@ -207,18 +211,18 @@ body{
     overflow-x: hidden;
 }
 
-.video{
+.video {
     min-height: 250px;
     height: auto;
 }
 
-.thumbnail{
+.thumbnail {
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
 
-.content{
+.content {
     width: 100%;
     height: 100px;
     padding: 10px;
@@ -226,7 +230,7 @@ body{
     justify-content: space-between;
 }
 
-.channel-icon{
+.channel-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -234,13 +238,13 @@ body{
     margin-right: 10px;
 }
 
-.title{
+.title {
     width: 100%;
     height: 40px;
     overflow: hidden;
 }
 
-.channel-name{
+.channel-name {
     font-size: 14px;
     margin: 2px 0;
     color: #979797;

@@ -1,16 +1,14 @@
 const videoCardContainer = document.querySelector('.video-container');
 
 let api_key = "AIzaSyDpXhMed2TRhFUwDS1ffS36x-ZVnTb_1j8";
-let video_http = "https://www.googleapis.com/youtube/v3/videos?";
+let maxResults = 50;
+let search = "Html tamil";
+
+
+let video_http = `https://www.googleapis.com/youtube/v3/search?key=${api_key}&type=video&part=snippet&maxResults=${maxResults}&q=${search}`;
 let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 
-fetch(video_http + new URLSearchParams({
-        key: api_key,
-        part: 'snippet',
-        chart: 'mostPopular',
-        maxResults: 50,
-        regionCode: 'IN'
-    }))
+fetch(video_http)
     .then(res => res.json())
     .then(data => {
         data.items.forEach(item => {
@@ -33,19 +31,19 @@ const getChannelIcon = (video_data) => {
 }
 
 const makeVideoCard = (data) => {
-    videoCardContainer.innerHTML += `
+        videoCardContainer.innerHTML += `
     <div class="video" onclick="location.href = 'https://youtube.com/watch?v=${data.id}'">
         <img src="${data.snippet.thumbnails.high.url}" class="thumbnail" alt="">
         <div class="content">
-            <img src="${data.channelThumbnail}" class="channel-icon" alt="">
             <div class="info">
                 <h4 class="title">${data.snippet.title}</h4>
-                <p class="channel-name">${data.snippet.channelTitle}</p>
             </div>
         </div>
     </div>
     `;
-}
+    }
+    // <img src="${data.channelThumbnail}" class="channel-icon" alt="">
+    // <p class="channel-name">${data.snippet.channelTitle}</p>
 
 // search bar
 
